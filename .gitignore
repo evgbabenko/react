@@ -1,0 +1,4 @@
+$ cat .gitignore
+# exclude everything except directory foo/bar
+todo-list/node_modules
+todo-list/build

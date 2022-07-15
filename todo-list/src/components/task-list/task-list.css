@@ -1,0 +1,44 @@
+.list{
+    position: relative;
+    list-style: none;
+    padding: 0px 0px;
+    
+}
+.item{
+    border-radius: 10px 10px;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: antiquewhite;
+    font-size: 1.2em;
+    font-weight: 400;
+    display: flex;
+    position: relative;
+}
+.icon-edit{
+    color: green;
+    font-size: 1.4em;
+    position: absolute;
+    right: 35px;
+    top: 5px;
+}
+.icon-erase{
+    color:red;
+    font-size: 1.4em;
+    position: absolute;
+    right:5px;
+    top: 5px;
+}
+.icon-edit:hover,
+.icon-erase:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.error{
+    background-color: red;
+    color: white;
+    border-radius: 10px 10px;
+    padding: 5px 15px;
+    margin: 5px;
+    font-size: 1.2em;
+    font-weight: 400;
+}
