@@ -12,8 +12,8 @@ const Main = (props) => {
     return (
         <div className='main-div'>
             <Title text={props.AppTitle} />
-            <Input />
-            <TaskList TaskArr={props.TaskArr} />
+            <Input TaskArr={props.TaskArr}/>
+            <TaskList  TaskArr={props.TaskArr}/>
             <Title text={props.BottomText} />
         </div>
     )

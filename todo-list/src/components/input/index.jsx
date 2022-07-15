@@ -3,16 +3,20 @@ import React, { Component } from 'react';
 import './input.css';
 
 export default class Input extends Component {
-    state = { TaskList: [] }
+    
+    state = { TaskArr: this.props.TaskArr }
+    
     render() {
-    const addTask = () => {
-        let newTask = document.getElementById('task').value;
-        this.state.TaskList.push(newTask);
-    }
+        const addTask = () => {
+            let newTask = document.getElementById('task');
+            this.state.TaskArr.push(newTask.value);
+            console.log(this.state.TaskArr);
+            newTask.value = '';
+        }
         return (
             <div>
                 <input type="text" name="task" id="task" className='input-text'/>
-                <input onClock={addTask} type="button" value="Сохранить" className='button' />
+                <input onClick={addTask} type="button" value="Сохранить" className='button' />
             </div>
         )
     }
