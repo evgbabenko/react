@@ -3,13 +3,11 @@ import React, { Component } from 'react';
 import './input.css';
 
 export default class Input extends Component {
-    
     state = { TaskArr: this.props.TaskArr }
-    
     render() {
         const addTask = () => {
             let newTask = document.getElementById('task');
-            this.state.TaskArr.push(newTask.value);
+            this.state.TaskArr.unshift(newTask.value);
             console.log(this.state.TaskArr);
             newTask.value = '';
         }

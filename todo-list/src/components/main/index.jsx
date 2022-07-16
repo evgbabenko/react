@@ -5,10 +5,7 @@ import TaskList from '../task-list';
 //css Import
 import './main.css'
 
-
-
 const Main = (props) => {
-  
     return (
         <div className='main-div'>
             <Title text={props.AppTitle} />
