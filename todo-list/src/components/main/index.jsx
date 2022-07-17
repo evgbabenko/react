@@ -38,6 +38,11 @@ export default class Main extends Component {
         this.setState({ edit: true, index: index, todo: todo });
     }
 
+    onCancle = () => {
+        this.setState({ edit: false });
+        this.setState({ TaskArr: [...this.state.TaskArr]})
+    }
+
     render() {
         const { TaskArr } = this.state;
         console.log(TaskArr);
@@ -56,7 +61,7 @@ export default class Main extends Component {
             return (
                 <div className='main-div'>
                     <Title text={this.props.AppTitle} />
-                    <Input onUpdateTask={this.onUpdateTask} edit={edit} index={index} todo={todo} />
+                    <Input onUpdateTask={this.onUpdateTask} onCancle={this.onCancle} edit={edit} index={index} todo={todo} />
                     <TaskList TaskArr={TaskArr} onDelTask={this.onDelTask} onEdit={this.onEdit} />
                     <Title text={tasks}/>
                     <Title text={this.props.BottomText} />
