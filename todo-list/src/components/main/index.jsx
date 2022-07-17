@@ -8,9 +8,11 @@ import './main.css'
 export default class Main extends Component {
     state = { TaskArr: this.props.TaskArr };
     onAddTask = (newTask) => {
-        const date = new Date();
-        const newArr = [{ task: newTask, date: date.toDateString()}, ...this.state.TaskArr];
-        this.setState({ TaskArr: newArr });
+        if (newTask) {
+            const date = new Date();
+            const newArr = [{ task: newTask, date: date.toDateString() }, ...this.state.TaskArr];
+            this.setState({ TaskArr: newArr });
+        } else { alert('Пустое значение!')}
     }
 
     onDelTask = (index) => {
