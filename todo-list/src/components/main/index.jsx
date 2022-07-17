@@ -22,10 +22,15 @@ export default class Main extends Component {
     }
 
     onUpdateTask = (todo, index) => {
-        let newArr = [...this.state.TaskArr];
-        newArr[index].task = todo;
-        this.setState({ TaskArr: newArr });
-        this.setState({ edit: false });
+        if (todo && index) {
+            let newArr = [...this.state.TaskArr];
+            newArr[index].task = todo;
+            this.setState({ TaskArr: newArr });
+            this.setState({ edit: false });
+        }
+        else {
+            alert('Внесите изменения!');
+        }
     }
 
     onEdit = (index) => {
