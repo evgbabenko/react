@@ -12,9 +12,10 @@ const TaskList = ({onDelTask, onEdit, TaskArr}) => {
                 <ul className='list'>
                     {TaskArr.map((task, index) => {
                         return (
-                            <li className='item' key={index * 5 + 'b'}>{task}
+                            <li className='item' key={index * 5 + 'b'}>{task.task}
                                 <div className='icon-edit'><i onClick={() => {onEdit(index) }}className="fas fa-edit"></i></div>
                                 <div className='icon-erase' ><i onClick={() => { onDelTask(index) }} className="fas fa-eraser"></i></div>
+                                <div className='date'>{task.date}</div>
                             </li>
                         )
                     })}

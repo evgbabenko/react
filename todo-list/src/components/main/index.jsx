@@ -8,7 +8,8 @@ import './main.css'
 export default class Main extends Component {
     state = { TaskArr: this.props.TaskArr };
     onAddTask = (newTask) => {
-        const newArr = [newTask, ...this.state.TaskArr];
+        const date = new Date();
+        const newArr = [{ task: newTask, date: date.toDateString()}, ...this.state.TaskArr];
         this.setState({ TaskArr: newArr });
     }
 
@@ -20,13 +21,13 @@ export default class Main extends Component {
 
     onUpdateTask = (todo, index) => {
         let newArr = [...this.state.TaskArr];
-        newArr[index] = todo;
+        newArr[index].task = todo;
         this.setState({ TaskArr: newArr });
         this.setState({ edit: false });
     }
 
     onEdit = (index) => {
-        const todo = [...this.state.TaskArr][index];
+        const todo = [...this.state.TaskArr][index].task;
         this.setState({ edit: true, index: index, todo: todo });
     }
 
