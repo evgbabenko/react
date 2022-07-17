@@ -37,7 +37,14 @@ export default class Main extends Component {
         const { edit } = this.state;
         const { index } = this.state;
         const { todo } = this.state;
-        const tasks = [...this.state.TaskArr].lenght;
+        let tasks  = '';
+        if (this.state.TaskArr.length === 0) { 
+            tasks  = '';
+        }
+        else {
+            tasks  = 'Всего заданий: ' + this.state.TaskArr.length;
+        }
+        
         if (edit) {
             return (
                 <div className='main-div'>
