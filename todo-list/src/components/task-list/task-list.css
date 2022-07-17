@@ -8,12 +8,17 @@
     border-radius: 10px 10px;
     padding: 10px 15px;
     margin: 5px;
-    background-color: antiquewhite;
-    font-size: 1.2em;
-    font-weight: 400;
+    font-size: 1.4em;
+    font-weight: 600;
     display: flex;
     position: relative;
+    background: -webkit-linear-gradient(45deg, rgb(20, 193, 25) 8%, rgb(176, 182, 82), rgb(16, 163, 216) 94%);
+    background: -moz-linear-gradient(45deg, rgb(20, 193, 25) 8%, rgb(176, 182, 82), rgb(16, 163, 216) 94%);
+    background: linear-gradient(45deg, rgb(20, 193, 25) 8%, rgb(176, 182, 82), rgb(16, 163, 216) 94%);
+    color: white;
+    text-transform: uppercase;
 }
+
 .icon-edit{
     color: green;
     font-size: 1.4em;
@@ -34,11 +39,21 @@
     transform: scale(1.2);
 }
 .error{
-    background-color: red;
+    background: -webkit-linear-gradient(45deg, rgb(162, 207, 154) 22%, rgb(182, 82, 117), rgb(16, 216, 31));
+    background: -moz-linear-gradient(45deg, rgb(162, 207, 154) 22%, rgb(182, 82, 117), rgb(16, 216, 31));
+    background: linear-gradient(45deg, rgb(162, 207, 154) 22%, rgb(182, 82, 117), rgb(16, 216, 31));
     color: white;
     border-radius: 10px 10px;
-    padding: 5px 15px;
+    padding: 10px 15px;
     margin: 5px;
     font-size: 1.2em;
     font-weight: 400;
+}
+.date{
+    display: inline-flex;
+    font-size: 0.6em;
+    font-weight: 300;
+    color: white;
+    justify-self:end;
+    margin-left: 20px;
 }

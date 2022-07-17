@@ -8,7 +8,7 @@ import './app.css'
 
 const AppTitle = 'TODO List';
 const BottomText = 'Список на сегодня';
-const TaskArr = ['1','4'];  
+const TaskArr = [];  
 
 const App = () => {
     

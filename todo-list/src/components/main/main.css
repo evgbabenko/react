@@ -1,5 +1,10 @@
 .main-div{
-    background-color: darkgray;
+    background: -webkit-linear-gradient(45deg, rgb(192, 207, 154), rgb(150, 82, 182), rgb(159, 26, 67));
+    background: -moz-linear-gradient(45deg, rgb(192, 207, 154), rgb(150, 82, 182), rgb(159, 26, 67));
+    background: linear-gradient(45deg, rgb(192, 207, 154), rgb(150, 82, 182), rgb(159, 26, 67));
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     border-radius: 20px 20px;
    /* height: 300px;*/
     width: 40%;

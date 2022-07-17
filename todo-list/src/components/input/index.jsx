@@ -2,20 +2,23 @@ import React, { Component } from 'react';
 
 import './input.css';
 
-export default class Input extends Component {
-    state = { TaskArr: this.props.TaskArr }
-    render() {
-        const addTask = () => {
-            let newTask = document.getElementById('task');
-            this.state.TaskArr.unshift(newTask.value);
-            console.log(this.state.TaskArr);
-            newTask.value = '';
-        }
+const Input = ({ onAddTask, onUpdateTask, edit, index, todo }) => {
+    if (edit) {
         return (
             <div>
-                <input type="text" name="task" id="task" className='input-text'/>
-                <input onClick={addTask} type="button" value="Сохранить" className='button' />
+                <input type="text" name="task" id="task" className='input-text' placeholder={todo} />
+                <input onClick={() => { onUpdateTask(document.getElementById("task").value, index); document.getElementById("task").value = "" }} type="button" value="Сохранить" className='button' />
+            </div>
+        )
+    }
+    else {
+        return (
+            <div>
+                <input type="text" name="task" id="task" className='input-text' />
+                <input onClick={() => { onAddTask(document.getElementById("task").value); document.getElementById("task").value = "" }} type="button" value="Сохранить" className='button' />
             </div>
         )
     }
 }
+
+export default Input;
