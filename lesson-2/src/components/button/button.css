@@ -1,0 +1,12 @@
+.btn{
+    color: antiquewhite;
+    background-color: burlywood;
+    padding: 50px 30px;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 15px 15px;
+    width: 60px;
+    height: 60px;
+    margin: 20px 20px;
+}
