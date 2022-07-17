@@ -22,7 +22,7 @@ export default class Main extends Component {
     }
 
     onUpdateTask = (todo, index) => {
-        if (todo && index) {
+        if (todo) {
             let newArr = [...this.state.TaskArr];
             newArr[index].task = todo;
             this.setState({ TaskArr: newArr });
