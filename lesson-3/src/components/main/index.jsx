@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Routes, Route, Link } from "react-router-dom";
 import './main.css';
 
-import Button from '../button';
+import Btn from '../button';
 import Section from '../section';
 
 
@@ -16,9 +16,9 @@ export default class Main extends Component {
       <main>
         
           <header>
-            <Link to='/'><Button btnName='Currency' /></Link>
-            <Link to='/bank'><Button btnName='Bank info' /></Link>
-            <Button btnName='Djlrf' />
+            <Link to='/'><Btn btnName='Currency' /></Link>
+            <Link to='/bank'><Btn btnName='Bank info' /></Link>
+            <Btn btnName='Djlrf' />
         </header>
         <Routes>
           <Route path="/" element={<Section url={currency} />} />

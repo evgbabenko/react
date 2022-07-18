@@ -1,7 +1,8 @@
 import React from 'react'
+import Button from '@mui/material/Button';
 
-export default function Button ({btnName}) {
-        return (
-            <input type='button' value={btnName}></input>
+export default function Btn ({btnName}) {
+    return (
+            <Button variant="contained">{btnName}</Button> 
         )
 }
