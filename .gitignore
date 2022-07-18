@@ -2,3 +2,7 @@ $ cat .gitignore
 # exclude everything except directory foo/bar
 todo-list/node_modules
 todo-list/build
+lesson-2/node_modules
+lesson-2/build
+lesson-3/node_modules
+lesson-3/build
